@@ -18,6 +18,7 @@ module.exports = function ( graph ){
     t_scrollLeft,
     t_scrollRight,
     c_select = [],
+    c_match = [],
     m_select = [];
   
   
@@ -54,6 +55,7 @@ module.exports = function ( graph ){
     // HEURISTIC : to match the menus and their controllers we remove the first 2 letters and match
     c_select = [];
     m_select = [];
+    c_match = [];
     
     var c_temp = [];
     var m_temp = [];
@@ -74,6 +76,7 @@ module.exports = function ( graph ){
     numEntries = controlElements.length;
     for ( i = 0; i < numEntries; i++ ) {
       c_select[i] = "c_" + c_temp[i];
+      c_match[i] = "c_" + c_temp[i];
       if ( m_temp.indexOf(c_temp[i]) > -1 ) {
         m_select[i] = "m_" + c_temp[i];
       } else {
@@ -85,6 +88,8 @@ module.exports = function ( graph ){
       
       d3.select("#" + c_select[i]).on("click", menuElementClicked);
       d3.select("#" + c_select[i]).on("touchstart", menuElementTouched);
+
+      d3.select("#" + c_match[i]).on("click", openMatcher);
       
     }
     
@@ -162,6 +167,10 @@ module.exports = function ( graph ){
     // it sets a flag that we have touched it,
     // since d3. propagates the event for touch as hover and then click, we block the hover event
     touchedElement = true;
+  }
+
+  function openMatcher(){
+    alert('Matcher not yet available ...')
   }
   
   
