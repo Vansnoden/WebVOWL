@@ -4,6 +4,7 @@
  * @param graph the associated webvowl graph
  * @returns {{}}
  */
+
 module.exports = function ( graph ){
   var navigationMenu = {},
     scrollContainer = d3.select("#menuElementContainer").node(),
@@ -170,7 +171,20 @@ module.exports = function ( graph ){
   }
 
   function openMatcher(){
-    alert('Matcher not yet available ...')
+    // alert('Matcher not yet available ...');
+    // dialog.open({
+    //   title: 'Dialog Title',
+    //   source: 'Body content can be (HTML, CSS selector, DOM element, or URL)',
+    // }).then(x=>{
+     
+    // });
+    let comp = document.getElementById("matcher")
+    comp.style.display = "block";
+    let btn_close = document.getElementById("btn-match-close")
+    btn_close.onclick = (evt) => {
+      comp.style.display = 'none';
+    }
+    // alert('Matcher not yet available ...'+comp);
   }
   
   
