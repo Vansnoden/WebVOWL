@@ -325,10 +325,41 @@ marker path {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 1em;
     height: 680px;
     border: 1px solid rgb(160, 160, 160);
     overflow-y: scroll;
+    align-items: flex-start;
+    padding:12px;
+}
+
+.request-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    gap: 1em;
+    height: 620px;
+    overflow-y: scroll;
+    align-items: left;
+    width: 20vw;
+}
+
+.request-item{
+    border:1px solid #69c;
+    padding: 5px;
+}
+
+.request-item>.ri-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.request-item>.ri-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -339,6 +370,15 @@ marker path {
     gap: 1em;
     margin-top:0.5em;
     align-items: center;
+}
+
+.matchin{
+    border: 1px solid #69c;
+    width: 60vw;
+    margin: 1em;
+    padding: 1em;
+    height: 600px;
+    overflow-y: scroll;
 }
 
 #btn-match-close{
@@ -355,4 +395,18 @@ marker path {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+th{
+    border: 1px solid black;
+    margin: 0;
+    padding: 1em;
+    width: 20vh;
+}
+
+td{
+    border: 1px solid black;
+    margin: 0;
+    padding: 1em;
+    width: 20vh;
 }
