@@ -309,8 +309,8 @@ marker path {
     box-shadow: -3px 3px 3px #2b2b2b67;
     z-index: 10;
     background-color: #fff;
-    min-width: 1520px;
-    min-height: 800px;
+    min-width: 60vw;
+    min-height: 80vh;
 }
 
 #matcher>.match-header{
@@ -363,6 +363,11 @@ marker path {
     align-items: center;
 }
 
+.request-item:hover{
+    background-color: #69c;
+    transition: ease-in;
+}
+
 #matcher>.match-footer{
     display: flex;
     flex-direction: row;
@@ -382,13 +387,13 @@ marker path {
 }
 
 #btn-match-close{
-    background-color: #69c;
+    background-color: red;
     color: #fff;
-    padding: 5px;
+    padding: 1px;
     font-size: 14px;
     font-weight:  bold;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     text-align: center;
     display: flex;

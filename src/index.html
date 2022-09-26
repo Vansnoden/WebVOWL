@@ -9,7 +9,7 @@
     <meta name="robots" content="noindex,nofollow"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../src/app/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/webvowl.css"/>
     <link rel="stylesheet" type="text/css" href="css/webvowl.app.css"/>
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
@@ -653,7 +653,7 @@
                                 Temperature
                             </td>
                             <td>
-                                <input type="text" placeholder="search..."/>
+                                <input type="text" placeholder="search..." list="datalist"/>
                             </td>
                         </tr>
                         <tr>
@@ -661,7 +661,7 @@
                                 Vector name
                             </td>
                             <td>
-                                <input type="text" placeholder="search..."/>
+                                <input type="text" placeholder="search..." list="datalist"/>
                             </td>
                         </tr>
                         <tr>
@@ -669,7 +669,7 @@
                                 Vector name
                             </td>
                             <td>
-                                <input type="text" placeholder="search..."/>
+                                <input type="text" placeholder="search..." list="datalist"/>
                             </td>
                         </tr>
                         <tr>
@@ -677,7 +677,7 @@
                                 Vector name
                             </td>
                             <td>
-                                <input type="text" placeholder="search..."/>
+                                <input type="text" placeholder="search..." list="datalist"/>
                             </td>
                         </tr>
                         <tr>
@@ -685,7 +685,7 @@
                                 Nympho
                             </td>
                             <td>
-                                <input type="text" placeholder="search..."/>
+                                <input type="text" placeholder="search..." list="datalist"/>
                             </td>
                         </tr>
                         <tr>
@@ -693,7 +693,7 @@
                                 Adult
                             </td>
                             <td>
-                                <input type="text" placeholder="search..."/>
+                                <input type="text" placeholder="search..." list="datalist"/>
                             </td>
                         </tr>
                         <tr>
@@ -701,7 +701,7 @@
                                 In door
                             </td>
                             <td>
-                                <input type="text" placeholder="search..."/>
+                                <input type="text" placeholder="search..." list="datalist"/>
                             </td>
                         </tr>
                         <tr>
@@ -709,7 +709,7 @@
                                 Out door
                             </td>
                             <td>
-                                <input type="text" placeholder="search..."/>
+                                <input type="text" placeholder="search..." list="datalist"/>
                             </td>
                         </tr>
                         <tr>
@@ -717,7 +717,7 @@
                                 Human bitting rate
                             </td>
                             <td>
-                                <input type="text" placeholder="search..."/>
+                                <input type="text" placeholder="search..." list="datalist"/>
                             </td>
                         </tr>
                         <tr>
@@ -725,7 +725,7 @@
                                 Altitude
                             </td>
                             <td>
-                                <input type="text" placeholder="search..."/>
+                                <input type="text" placeholder="search..." list="datalist"/>
                             </td>
                         </tr>
                         <tr>
@@ -733,7 +733,7 @@
                                 Longitude
                             </td>
                             <td>
-                                <input type="text" placeholder="search..."/>
+                                <input type="text" placeholder="search..." list="datalist"/>
                             </td>
                         </tr>
                         <tr>
@@ -741,18 +741,25 @@
                                 Latitude
                             </td>
                             <td>
-                                <input type="text" placeholder="search..."/>
+                                <input type="text" placeholder="search..." list="datalist"/>
                             </td>
                         </tr>
                     </table>
+                    <datalist id="datalist">
+                        <option>Vector</option>
+                        <option>Indoor</option>
+                        <option>Temparature</option>
+                        <option>Human bitting rate</option>
+                        <option>Human landing catch</option>
+                    </datalist>
                 </div>
             </div>
         </div>
         <div class="match-footer">
-            <button>
+            <button id="cancel_match">
                 cancel
             </button>
-            <button>
+            <button id="save_match" onclick="save_match();">
                 save
             </button>
         </div>
@@ -763,7 +770,8 @@
 <script src="js/d3.min.js"></script>
 <script src="js/webvowl.js"></script>
 <script src="js/webvowl.app.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<!-- <script src="../src/webvowl/js/bootstrap.min.js" type="text/javascript"></script> -->
+<script src="js/my_script.js" type="text/javascript"></script>
 <script>window.onload = webvowl.app().initialize;</script>
 </body>
 </html>
